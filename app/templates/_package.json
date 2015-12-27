@@ -1,0 +1,58 @@
+{
+  "name": "<%= domainName %>",
+  "description": "Website code repo for <%= siteName %>",
+  "repository": {
+    "type": "git",
+    "url": "https://git@bitbucket.org/line58/<%= domainName %>.git"
+  },
+  "version": "0.0.1",
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp",
+    "buildJs": "jspm bundle-sfx src/js/app public/dist/build/js/app.min.js --minify --skip-source-maps"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.10.1",
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-eslint": "^1.1.1",
+    "gulp-minify-css": "^1.2.2",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.1.1",
+    "gulp-scss-lint": "^0.3.8",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "node-bourbon": "^4.2.3",
+    "node-neat": "^1.7.2",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.5"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "public"
+    },
+    "dependencies": {
+      "davatron5000/FitVids.js": "github:davatron5000/FitVids.js@^1.1.0",
+      "jquery": "github:components/jquery@^2.1.4",
+      "jquery-match-height": "npm:jquery-match-height@^0.6.0",
+      "jquery-placeholder": "npm:jquery-placeholder@^2.1.1",
+      "jzaefferer/jquery-validation": "github:jzaefferer/jquery-validation@^1.14.0",
+      "lodash-es": "npm:lodash-es@^3.10.1",
+      "node-waves": "npm:node-waves@^0.7.4",
+      "velocity-animate": "npm:velocity-animate@^1.2.3"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    },
+    "overrides": {
+      "npm:lodash-es@3.10.1": {
+        "format": "es6"
+      }
+    }
+  }
+}
