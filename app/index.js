@@ -110,6 +110,7 @@ module.exports = yeoman.generators.Base.extend({
 		});
 	},
 
+	/* NOTE: Let's simplify our life by removing uneccessary dependencies. Just use built-in Markdown
 	downloadingParsedown: function() {
 		var done = this.async();
 
@@ -172,6 +173,7 @@ module.exports = yeoman.generators.Base.extend({
 			done();
 		});
 	},
+	*/
 
 	cleaning: function() {
 		var done = this.async();
@@ -186,9 +188,9 @@ module.exports = yeoman.generators.Base.extend({
 			'craft/web.config',
 			'public/web.config',
 			'public/htaccess',
-			'public/index.php',
-			parsedownZipFile,
-			parsedownUnzipped
+			'public/index.php'
+			//parsedownZipFile,
+			//parsedownUnzipped
 			]);
 
 		cleanup.stderr.on('data', function (data) {

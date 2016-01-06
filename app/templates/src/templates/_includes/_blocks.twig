@@ -7,7 +7,7 @@
 		{% case 'text' %}
 
 			<div class="block__text">
-				{{ block.text | pd }}
+				{{ block.text | md }}
 			</div>
 
 		{% case 'heading' %}
@@ -17,7 +17,7 @@
 		{% case 'blockquote' %}
 
 			<blockquote class="block__blockquote">
-				{{ block.quote | pd }}
+				{{ block.quote | md }}
 
 				{% if block.source %}
 				<p class="source">
@@ -29,7 +29,7 @@
 		{% case 'pullquote' %}
 
 			<blockquote class="block__pullquote">
-				{{ block.pullquote | pd }}
+				{{ block.pullquote | md }}
 			</blockquote>
 
 		{% case 'image' %}
@@ -40,7 +40,7 @@
 					
 					{% if asset.caption %}
 						<figcaption class="block__caption">
-							{{ asset.caption | pd }}
+							{{ asset.caption | md }}
 						</figcaption>
 					{% endif %}
 				</figure>
@@ -55,7 +55,7 @@
 				
 				{% if block.caption %}
 					<figcaption class="block__caption">
-						{{ block.caption | pd }}
+						{{ block.caption | md }}
 					</figcaption>
 				{% endif %}
 			</figure>
