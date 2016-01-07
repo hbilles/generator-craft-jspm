@@ -292,6 +292,16 @@
 
 			{% endfor %}
 
+			{% if form.cmRequireOptIn %}
+			<div class="opt-in">
+				{% set selected = submission is defined and submission[cm_opt_in]
+					? submission[cm_opt_in]
+					: 1 %}
+				<input type="checkbox" id="cm_opt_in" name="cm_opt_in" value="1" {{ selected ? 'checked' }}>
+				<label for="cm_opt_in">Sign-up for our mailing list</label>
+			</div>
+			{% endif %}
+
 			{# NOTE: this field is a honeypot to trap bot submissions #}
 			{% if craft.config.perform is defined and craft.config.perform.honeypotField is defined %}
 			<div class="{{ craft.config.perform.honeypotField }}">
