@@ -275,12 +275,25 @@ module.exports = yeoman.generators.Base.extend({
 
 			this.directory('dist', 'public/dist');
 			this.directory('src', 'public/src');
+			this.directory('vendor', 'public/vendor');
 
 			done();
 		}
 	},
 
-	install: function() {
+	installDependencies: function() {
+		var done = this.async();
+
 		this.installDependencies();
+
+		done();
+	},
+
+	installJspmDependencies: function() {
+		var jspm = spawn('jspm', ['install']);
+
+		jspm.stderr.on('data', function (data) {
+			this.log(chalk.red('jspm install error: ') + data);
+		}.bind(this));
 	}
 });
