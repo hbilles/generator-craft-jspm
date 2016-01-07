@@ -4,7 +4,7 @@
 /*global $*/
 import 'jquery';
 import setValidation from './set-validation';
-import pushEvent from './pushEvent';
+import pushEvent from './push-event';
 
 
 var $forms = $('form'),
