@@ -1,4 +1,4 @@
-@include font-face(WebSymbols, '/ui/webfonts/WebSymbols');
+@include font-face(WebSymbols, '/dist/webfonts/WebSymbols');
 
 @mixin font-sans($weight: 400, $style: normal) {
 	font-family: helvetica, arial, sans-serif;
