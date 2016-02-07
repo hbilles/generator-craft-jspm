@@ -281,7 +281,7 @@ module.exports = yeoman.generators.Base.extend({
 		}
 	},
 
-	installDependencies: function() {
+	installDeps: function() {
 		var done = this.async();
 
 		this.installDependencies();
@@ -289,7 +289,7 @@ module.exports = yeoman.generators.Base.extend({
 		done();
 	},
 
-	installJspmDependencies: function() {
+	installJspmDeps: function() {
 		var jspm = spawn('jspm', ['install']);
 
 		jspm.stderr.on('data', function (data) {
